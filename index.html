@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="notebooks">
+<head>
+  <meta charset="UTF-8" />
+  <title>Busca com Lupa</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Calibri Light', sans-serif;
+      background: #fff;
+      margin: 20px;
+    }
+
+    #notebooks {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  border-radius: 0;
+  border: none;
+  margin: 0 auto;
+}
+
+
+    .search-container {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .search-container input {
+      width: 100%;
+      height: 44px;
+      padding: 10px 12px 10px 42px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #0000008a;
+      pointer-events: none;
+    }
+
+    select {
+      width: 100%;
+      height: 36px;
+      padding: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+li {
+  background: white;
+  padding: 12px 15px;
+  border-left: 4px solid #3fccb9;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+    strong {
+      display: block;
+      color: #444;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .right.top {
+      float: right;
+      margin-top: -25px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.title-row strong {
+  font-weight: bold;
+  font-size: 16px;
+  color: #444;
+  margin: 0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.code {
+  font-size: 12px;
+  color: #888;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+  </style>
+</head>
+
+<body ng-controller="NotebookListCtrl">
+  <div id="notebooks">
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input
+        type="text"
+        id="query"
+        ng-model="query"
+        placeholder="Buscar Produto"
+        autocomplete="off"
+      />
+    </div>
+
+    <select ng-model="orderList">
+      <option value="name">Por Nome</option>
+      <option value="-age">Mais Novos</option>
+      <option value="age">Mais Antigos</option>
+    </select>
+
+    <ul>
+        <li ng-repeat="notebook in notebooks | filter:query | orderBy: orderList">
+            <div class="title-row">
+              <strong>{{notebook.name}}</strong>
+              <span class="code">{{notebook.age}}</span>
+            </div>
+            <p>{{notebook.procesor}}</p>
+          </li>
+          
+    </ul>
+
+    <span>Produtos: {{notebooks.length}}</span>
+  </div>
+
+  <script>
+    var notebooks = angular.module('notebooks', []);
+
+    notebooks.controller('NotebookListCtrl', function ($scope) {
+      $scope.notebooks = [
+        {
+          name: "Compliance Tributário",
+          procesor: "Garante que os processos e obrigações tributárias da empresa estejam em conformidade com a legislação, evitando riscos, corrigindo falhas e identificando oportunidades, com reflexos diretos na contabilidade e na segurança fiscal.",
+          age: "TAX001"
+        },
+        {
+          name: "Planejamento Tributário",
+          procesor: "Analisa a situação fiscal da empresa para estruturar estratégias que reduzam a carga tributária de forma legal, aproveitando incentivos e evitando riscos, com impacto direto na lucratividade e na conformidade.",
+          age: "TAX002"
+        },
+        {
+          name: "Assessoria Tributária (Dúvidas e Direcionamentos)",
+          procesor: "Atende dúvidas fiscais da empresa e orienta sobre o melhor caminho a seguir em temas tributários, garantindo decisões seguras, alinhadas à legislação e com foco em evitar riscos e aproveitar oportunidades.",
+          age: "TAX003"
+        },
+
+        {
+          name: "Incentivos, Benefícios e Estratégias Fiscais",
+          procesor: "Mapeia e aplica incentivos fiscais como ICMS, ISS, IPI e PIS/COFINS, além de regimes especiais e benefícios regionais, conforme o perfil da empresa. Acompanha mudanças na legislação e apoia uma estrutura tributária estratégica e eficiente.",
+          age: "TAX004"
+        }
+        
+      ];
+      $scope.orderList = "name";
+    });
+  </script>
+</body>
+</html>

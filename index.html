@@ -127,15 +127,15 @@ li {
         type="text"
         id="query"
         ng-model="query"
-        placeholder="Buscar Produto"
+        placeholder="Pesquisar produtos…"
         autocomplete="off"
       />
     </div>
 
     <select ng-model="orderList">
-      <option value="name">Por Nome</option>
-      <option value="-age">Mais Novos</option>
-      <option value="age">Mais Antigos</option>
+      <option value="name">Ordenar por Nome (A–Z)</option>
+      <option value="-age">Ordenar por Mais Recentes</option>
+      <option value="age">Ordenar por Mais Antigos</option>
     </select>
 
     <ul>
@@ -177,6 +177,167 @@ li {
           name: "Incentivos, Benefícios e Estratégias Fiscais",
           procesor: "Mapeia e aplica incentivos fiscais como ICMS, ISS, IPI e PIS/COFINS, além de regimes especiais e benefícios regionais, conforme o perfil da empresa. Acompanha mudanças na legislação e apoia uma estrutura tributária estratégica e eficiente.",
           age: "TAX004"
+        },
+
+        {
+          name: "Recuperação de Tributos - PIS / COFINS (Revisão de Insumos, Exclusão do ICMS e Gross Up)",
+          procesor: "Revisa os insumos e calcula corretamente os créditos de PIS e COFINS, aplicando teses como a exclusão do ICMS da base e o Gross Up, para recuperar valores pagos a mais e melhorar a eficiência tributária da empresa.",
+          age: "TAX005",
+        },
+
+        {
+          name: "Auditoria de Obrigações Acessórias",
+          procesor: "Revisa e valida as informações enviadas ao Fisco (SPEDs, DCTF, EFD, entre outros) para identificar erros, omissões ou riscos, garantindo que as obrigações acessórias estejam corretas e a empresa em conformidade com a legislação.",
+          age: "TAX006",
+        },
+
+        {
+          name: "Assessoria em Notificações e Intimações Administrativas",
+          procesor: "Analisa e responde notificações e intimações fiscais recebidas pela empresa, orientando sobre os riscos e os passos corretos para regularização, com foco em evitar autuações e garantir segurança jurídica.",
+          age: "TAX007",
+        },
+
+        {
+          name: "Revisão de Grade Tributária",
+          procesor: "Analisa e revisa a tributação aplicada aos produtos e serviços (NCM, CST, CFOP, alíquotas), corrigindo erros que podem gerar pagamento indevido de tributos ou risco de autuação, com foco em conformidade e economia fiscal.",
+          age: "TAX008"
+        },
+
+        {
+          name: "Subvenções para Investimento ",
+          procesor: "Identifica e aplica benefícios fiscais de subvenção para investimentos, permitindo que a empresa reduza tributos como IRPJ e CSLL de forma legal, ao comprovar o uso dos recursos em expansão ou modernização.",
+          age: "TAX009"
+        },
+
+        {
+          name: "Subvenções para Investimento  - Importação",
+          procesor: "Aplica benefícios fiscais de subvenção para investimentos vinculados à importação, reduzindo tributos como IRPJ e CSLL ao comprovar que os recursos foram usados para expansão, modernização ou inovação da empresa.",
+          age: "TAX009-01"
+        },
+
+        
+        {
+          name: "Suspensão e Imunidade de PIS/COFINS nos Fretes com Mercadorias Destinadas à Exportação",
+          procesor: "Aplica a suspensão ou imunidade de PIS/COFINS sobre os fretes vinculados a mercadorias destinadas à exportação, garantindo economia tributária e conformidade com a legislação vigente.",
+          age: "TAX010"
+        },
+
+        {
+          name: "Compensação Cruzada Tributos Federais",
+          procesor: "Permite utilizar créditos de tributos federais para quitar outros tributos ou débitos inscritos, mesmo que sejam de naturezas diferentes, gerando economia, regularidade fiscal e melhor gestão do caixa da empresa.",
+          age: "TAX011"
+        },
+
+        {
+          name: "Análise e Revisão de Atividade Preponderante para Desoneração da Folha",
+          procesor: "Analisa e revisa a atividade principal da empresa para verificar se ela pode se enquadrar na desoneração da folha de pagamento, reduzindo encargos sobre a folha e gerando economia com base na legislação vigente.",
+          age: "TAX012"
+        },
+
+        {
+          name: "Recuperação de PIS/COFINS-ST sobre Venda de Cigarros",
+          procesor: "Recupera valores de PIS/COFINS-ST pagos a mais na venda de cigarros, com base em decisões judiciais e interpretação da legislação, gerando créditos tributários e alívio no caixa da empresa.",
+          age: "TAX013"
+        },
+
+
+        {
+          name: "Exclusão do ICMS da Base de Cálculo do PIS e da COFINS",
+          procesor: "Aplica o direito reconhecido pelo STF que exclui o ICMS da base de cálculo do PIS e da COFINS, permitindo a recuperação de valores pagos a mais e a redução dos tributos de forma legal e segura.",
+          age: "TAX014"
+        },
+
+        {
+          name: "Habilitação, Compensação e Acompanhamento de Créditos de Ações Judiciais",
+          procesor: "Faz a habilitação e compensação de créditos obtidos em ações judiciais tributárias, além de acompanhar todo o processo até o uso efetivo dos valores, garantindo conformidade e aproveitamento seguro dos créditos.",
+          age: "TAX015"
+        },
+
+        {
+          name: "Recuperação de créditos de ICMS",
+          procesor: "Identifica e recupera créditos de ICMS pagos a mais ou não aproveitados pela empresa, corrigindo erros e garantindo o uso correto desses valores para reduzir o custo tributário de forma legal e eficiente.",
+          age: "TAX016"
+        },
+
+        {
+          name: "Recuperação de créditos de ICMS - 20% Crédito Presumido",
+          procesor: "Aplica o benefício fiscal que permite a recuperação de 20% de crédito presumido de ICMS sobre determinadas operações, reduzindo a carga tributária e gerando economia para a empresa de forma legal e segura.",
+          age: "TAX016-01"
+        },
+
+
+        {
+          name: "Recuperação de Tributos - IRPJ / CSLL",
+          procesor: "Revisa e identifica créditos de IRPJ e CSLL não aproveitados em situações específicas, relacionadas a subvenções. Aplicação pontual, voltada à recuperação de valores pagos indevidamente.",
+          age: "TAX017"
+        },
+
+        {
+          name: "Habilitação, transferência e utilização de créditos de ICMS",
+          procesor: "Realiza a habilitação, transferência e uso de créditos de ICMS acumulados ou oriundos de benefícios fiscais, garantindo que a empresa aproveite esses valores de forma legal, estratégica e eficiente.",
+          age: "TAX018"
+        },
+
+        
+        {
+          name: "Recuperação de Tributos - ICMS/ST (ADRC-ST, MVA superior)",
+          procesor: "Recupera valores de ICMS/ST pagos a mais devido à aplicação de MVA superior à praticada ou erros identificados via ADRC-ST, garantindo o ressarcimento legal e a redução do custo tributário.",
+          age: "TAX020"
+        },
+
+        {
+          name: "Restituição de PIS/COFINS Monofásico",
+          procesor: "Analisa e recupera créditos de PIS e COFINS pagos indevidamente na venda de produtos monofásicos (como combustíveis, bebidas e medicamentos), cuja tributação já foi recolhida na indústria, evitando cobrança em duplicidade.",
+          age: "TAX021"
+        },
+
+        {
+          name: "Exclusão do ICMS DIFAL da base de cálculo do PIS e da COFINS",
+          procesor: "Apura e recupera valores de PIS e COFINS pagos indevidamente sobre o ICMS-DIFAL, com base no entendimento de que esse valor não integra o faturamento e não deve compor a base das contribuições.",
+          age: "TAX022"
+        },
+
+        {
+          name: "Imunidade na CPRB/Desoneração da Folha de Pagamento",
+          procesor: "Aplica a imunidade da CPRB (Contribuição Previdenciária sobre Receita Bruta) para entidades e atividades amparadas legalmente, garantindo economia com encargos sobre a folha e conformidade com a legislação.",
+          age: "TAX023"
+        },
+
+        {
+          name: "Exclusão do Crédito Presumido de ICMS do IRPJ/CSLL - Pacto Federativo",
+          procesor: "Reduz a base de cálculo do IRPJ e da CSLL por meio da exclusão de benefícios fiscais de ICMS concedidos pelos estados, conforme o pacto federativo e decisões do STF, gerando economia tributária legal.",
+          age: "TAX024"
+        },
+
+        {
+          name: "Lei do Bem - Benefício Fiscal IRPJ CSLL",
+          procesor: "Aplica o benefício fiscal da Lei do Bem, que permite deduzir do IRPJ e da CSLL os investimentos em pesquisa, desenvolvimento e inovação, incentivando a inovação tecnológica e gerando economia tributária.",
+          age: "TAX025"
+        },
+
+        {
+          name: "Recuperação do Crédito de IPI não Recuperável no PIS e COFINS",
+          procesor: "Recupera valores de IPI não aproveitados como crédito, permitindo sua compensação no PIS e na COFINS, com base em interpretação legal e jurisprudencial, gerando economia e corrigindo distorções fiscais.",
+          age: "TAX026"
+        },
+
+        {
+          name: "Imunidade de PIS COFINS em operações para Zona Franca de Manaus e Áreas de Livre Comércio",
+          procesor: "Aplica a imunidade de PIS e COFINS em vendas destinadas à Zona Franca de Manaus e Áreas de Livre Comércio, garantindo isenção legal dos tributos e aumento da competitividade nas operações com esses destinos.",
+          age: "TAX027"
+        },
+
+        {
+          name: "Consultoria e Assessoria no Requerimento de Depreciação Acelerada",
+          procesor: "Orienta e executa o processo de requerimento da depreciação acelerada de ativos, permitindo que a empresa antecipe deduções no IRPJ e na CSLL, com base em benefícios legais, reduzindo a carga tributária.",
+          age: "TAX028"
+        },
+
+        
+        {
+          name: "Exclusão do ICMS ST da base de cálculo de PIS e COFINS",
+          procesor: "Aplica a exclusão do ICMS-ST da base de cálculo do PIS e da COFINS, permitindo a recuperação de valores pagos a mais e a redução legal da carga tributária nas operações sujeitas à substituição tributária.",
+          age: "TAX029"
         }
         
       ];

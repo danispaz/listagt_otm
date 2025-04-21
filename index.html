@@ -17,23 +17,25 @@
     }
 
     #notebooks {
-      width: 100%;
-      max-width: 100%;
-      padding: 20px 16px;
-      box-sizing: border-box;
-      background-color: #f4f4f4;
-      border-radius: 0;
-      border: none;
-      margin: 0 auto;
-    }
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
 
-    .fixed-filters {
-      position: sticky;
-      top: 0;
-      background-color: #f4f4f4;
-      padding: 20px 0 10px;
-      z-index: 100;
-    }
+
+.fixed-filters {
+  position: sticky;
+  top: 0;
+  background-color: #f4f4f4;
+  padding: 16px 0 12px;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
 
     .search-container {
       position: relative;
@@ -230,16 +232,20 @@
       </div>
       
 
-    <ul>
-      <li ng-repeat="notebook in notebooks | filter:query | orderBy: orderList">
-        <div class="title-row">
-          <strong>{{notebook.name}}</strong>
-          <span class="code">{{notebook.age}}</span>
-        </div>
-        <p>{{notebook.procesor}}</p>
-      </li>
-    </ul>
-  </div>
+    </div> <!-- Fim da fixed-filters -->
+
+    <div class="product-list">
+      <ul>
+        <li ng-repeat="notebook in notebooks | filter:query | orderBy: orderList">
+          <div class="title-row">
+            <strong>{{notebook.name}}</strong>
+            <span class="code">{{notebook.age}}</span>
+          </div>
+          <p>{{notebook.procesor}}</p>
+        </li>
+      </ul>
+    </div>
+    
 
 
   <script>

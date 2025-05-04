@@ -115,7 +115,7 @@
     .title-row strong {
       font-weight: bold;
       font-size: 16px;
-      color: #444;
+      color: #444444;
       margin: 0;
       flex: 1;
       white-space: nowrap;
@@ -203,6 +203,16 @@
   }
 }
 
+.form-icon {
+  color: #888;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.form-icon:hover {
+  color: #0078d4;
+}
+
 
 
   </style>
@@ -242,10 +252,25 @@
         <li ng-repeat="notebook in notebooks | filter:query | orderBy: orderList">
           <div class="title-row">
             <strong>{{notebook.name}}</strong>
-            <span class="code">{{notebook.age}}</span>
+        
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="code">{{notebook.age}}</span>
+              <a 
+                ng-href="{{notebook.url}}" 
+                target="_blank" 
+                class="form-icon" 
+                title="Ver página do produto">
+                <i class="fas fa-file-alt"></i>
+              </a>
+            </div>
           </div>
           <p>{{notebook.procesor}}</p>
         </li>
+        
+        
+        
+        
+        
       </ul>
     </div>
     
@@ -259,184 +284,214 @@
         {
           name: "Compliance Tributário",
           procesor: "Garante que os processos e obrigações tributárias da empresa estejam em conformidade com a legislação, evitando riscos, corrigindo falhas e identificando oportunidades, com reflexos diretos na contabilidade e na segurança fiscal.",
-          age: "TAX001"
+          age: "TAX001",
+           url: "https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Compliance-Tribut%C3%A1rio.aspx"
         },
         {
           name: "Planejamento Tributário",
           procesor: "Analisa a situação fiscal da empresa para estruturar estratégias que reduzam a carga tributária de forma legal, aproveitando incentivos e evitando riscos, com impacto direto na lucratividade e na conformidade.",
-          age: "TAX002"
+          age: "TAX002",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Planejamento-Tribut%C3%A1rio.aspx"
         },
         {
           name: "Assessoria Tributária (Dúvidas e Direcionamentos)",
           procesor: "Atende dúvidas fiscais da empresa e orienta sobre o melhor caminho a seguir em temas tributários, garantindo decisões seguras, alinhadas à legislação e com foco em evitar riscos e aproveitar oportunidades.",
-          age: "TAX003"
+          age: "TAX003",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Assessoria%20Tribut%C3%A1ria%20(D%C3%BAvidas%20e%20Direcionamentos).aspx"
         },
 
         {
           name: "Incentivos, Benefícios e Estratégias Fiscais",
           procesor: "Mapeia e aplica incentivos fiscais como ICMS, ISS, IPI e PIS/COFINS, além de regimes especiais e benefícios regionais, conforme o perfil da empresa. Acompanha mudanças na legislação e apoia uma estrutura tributária estratégica e eficiente.",
-          age: "TAX004"
+          age: "TAX004",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Incentivos,-Benef%C3%ADcios-e-Estrat%C3%A9gias-Fiscais.aspx"
         },
 
         {
           name: "Recuperação de Tributos - PIS / COFINS (Revisão de Insumos, Exclusão do ICMS e Gross Up)",
           procesor: "Revisa os insumos e calcula corretamente os créditos de PIS e COFINS, aplicando teses como a exclusão do ICMS da base e o Gross Up, para recuperar valores pagos a mais e melhorar a eficiência tributária da empresa.",
           age: "TAX005",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Recupera%C3%A7%C3%A3o-de-Tributos---PIS---COFINS-(Revis%C3%A3o-de-Insumos,-Exclus%C3%A3o-do-ICMS-e-Gross-Up).aspx"
         },
 
         {
           name: "Auditoria de Obrigações Acessórias",
           procesor: "Revisa e valida as informações enviadas ao Fisco (SPEDs, DCTF, EFD, entre outros) para identificar erros, omissões ou riscos, garantindo que as obrigações acessórias estejam corretas e a empresa em conformidade com a legislação.",
           age: "TAX006",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Auditoria-de-Obriga%C3%A7%C3%B5es-Acess%C3%B3rias.aspx"
         },
 
         {
           name: "Assessoria em Notificações e Intimações Administrativas",
           procesor: "Analisa e responde notificações e intimações fiscais recebidas pela empresa, orientando sobre os riscos e os passos corretos para regularização, com foco em evitar autuações e garantir segurança jurídica.",
           age: "TAX007",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Assessoria-em-Notifica%C3%A7%C3%B5es-e-Intima%C3%A7%C3%B5es-Administrativas.aspx"
         },
 
         {
           name: "Revisão de Grade Tributária",
           procesor: "Analisa e revisa a tributação aplicada aos produtos e serviços (NCM, CST, CFOP, alíquotas), corrigindo erros que podem gerar pagamento indevido de tributos ou risco de autuação, com foco em conformidade e economia fiscal.",
-          age: "TAX008"
+          age: "TAX008",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Revis%C3%A3o-de-Grade-Tribut%C3%A1ria.aspx"
         },
 
         {
           name: "Subvenções para Investimento ",
           procesor: "Identifica e aplica benefícios fiscais de subvenção para investimentos, permitindo que a empresa reduza tributos como IRPJ e CSLL de forma legal, ao comprovar o uso dos recursos em expansão ou modernização.",
-          age: "TAX009"
+          age: "TAX009",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Subven%C3%A7%C3%B5es-para-Investimento.aspx"
         },
 
         {
           name: "Subvenções para Investimento  - Importação",
           procesor: "Aplica benefícios fiscais de subvenção para investimentos vinculados à importação, reduzindo tributos como IRPJ e CSLL ao comprovar que os recursos foram usados para expansão, modernização ou inovação da empresa.",
-          age: "TAX009-01"
+          age: "TAX009-01",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Subven%C3%A7%C3%B5es-para-Investimento---Importa%C3%A7%C3%A3o.aspx"
         },
 
         
         {
           name: "Suspensão e Imunidade de PIS/COFINS nos Fretes com Mercadorias Destinadas à Exportação",
           procesor: "Aplica a suspensão ou imunidade de PIS/COFINS sobre os fretes vinculados a mercadorias destinadas à exportação, garantindo economia tributária e conformidade com a legislação vigente.",
-          age: "TAX010"
+          age: "TAX010",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Suspens%C3%A3o-e-Imunidade-de-PIS-COFINS-nos-Fretes-com-Mercadorias-Destinadas-%C3%A0-Exporta%C3%A7%C3%A3o.aspx"
         },
 
         {
           name: "Compensação Cruzada Tributos Federais",
           procesor: "Permite utilizar créditos de tributos federais para quitar outros tributos ou débitos inscritos, mesmo que sejam de naturezas diferentes, gerando economia, regularidade fiscal e melhor gestão do caixa da empresa.",
-          age: "TAX011"
+          age: "TAX011",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Compensa%C3%A7%C3%A3o-Cruzada-Tributos-Federais.aspx"
         },
 
         {
           name: "Análise e Revisão de Atividade Preponderante para Desoneração da Folha",
           procesor: "Analisa e revisa a atividade principal da empresa para verificar se ela pode se enquadrar na desoneração da folha de pagamento, reduzindo encargos sobre a folha e gerando economia com base na legislação vigente.",
-          age: "TAX012"
+          age: "TAX012",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/An%C3%A1lise-e-Revis%C3%A3o-de-Atividade-Preponderante-para-Desonera%C3%A7%C3%A3o-da-Folha.aspx"
         },
 
         {
           name: "Recuperação de PIS/COFINS-ST sobre Venda de Cigarros",
           procesor: "Recupera valores de PIS/COFINS-ST pagos a mais na venda de cigarros, com base em decisões judiciais e interpretação da legislação, gerando créditos tributários e alívio no caixa da empresa.",
-          age: "TAX013"
+          age: "TAX013",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Recupera%C3%A7%C3%A3o-de-PIS-COFINS-ST-sobre-Venda-de-Cigarros.aspx"
         },
 
 
         {
           name: "Exclusão do ICMS da Base de Cálculo do PIS e da COFINS",
           procesor: "Aplica o direito reconhecido pelo STF que exclui o ICMS da base de cálculo do PIS e da COFINS, permitindo a recuperação de valores pagos a mais e a redução dos tributos de forma legal e segura.",
-          age: "TAX014"
+          age: "TAX014",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Exclus%C3%A3odoICMSdaBasedeC%C3%A1lculodoPISedaCOFINS.aspx"
         },
 
         {
           name: "Habilitação, Compensação e Acompanhamento de Créditos de Ações Judiciais",
           procesor: "Faz a habilitação e compensação de créditos obtidos em ações judiciais tributárias, além de acompanhar todo o processo até o uso efetivo dos valores, garantindo conformidade e aproveitamento seguro dos créditos.",
-          age: "TAX015"
+          age: "TAX015",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Habilita%C3%A7%C3%A3o,-Compensa%C3%A7%C3%A3o-e-Acompanhamento-de-Cr%C3%A9ditos-de-A%C3%A7%C3%B5es-Judiciais.aspx"
         },
 
         {
           name: "Recuperação de créditos de ICMS",
           procesor: "Identifica e recupera créditos de ICMS pagos a mais ou não aproveitados pela empresa, corrigindo erros e garantindo o uso correto desses valores para reduzir o custo tributário de forma legal e eficiente.",
-          age: "TAX016"
+          age: "TAX016",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Recupera%C3%A7%C3%A3o-de-cr%C3%A9ditos-de-ICMS.aspx"
         },
 
         {
           name: "Recuperação de créditos de ICMS - 20% Crédito Presumido",
           procesor: "Aplica o benefício fiscal que permite a recuperação de 20% de crédito presumido de ICMS sobre determinadas operações, reduzindo a carga tributária e gerando economia para a empresa de forma legal e segura.",
-          age: "TAX016-01"
+          age: "TAX016-01",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Recupera%C3%A7%C3%A3o-de-cr%C3%A9ditos-de-ICMS---20--Cr%C3%A9dito-Presumido.aspx"
         },
 
 
         {
           name: "Recuperação de Tributos - IRPJ / CSLL",
           procesor: "Revisa e identifica créditos de IRPJ e CSLL não aproveitados em situações específicas, relacionadas a subvenções. Aplicação pontual, voltada à recuperação de valores pagos indevidamente.",
-          age: "TAX017"
+          age: "TAX017",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Recupera%C3%A7%C3%A3o-de-Tributos---IRPJ---CSLL.aspx"
         },
 
         {
           name: "Habilitação, transferência e utilização de créditos de ICMS",
           procesor: "Realiza a habilitação, transferência e uso de créditos de ICMS acumulados ou oriundos de benefícios fiscais, garantindo que a empresa aproveite esses valores de forma legal, estratégica e eficiente.",
-          age: "TAX018"
+          age: "TAX018",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Habilita%C3%A7%C3%A3o,-transfer%C3%AAncia-e-utiliza%C3%A7%C3%A3o-de-cr%C3%A9ditos-de-ICMS.aspx"
         },
 
         
         {
           name: "Recuperação de Tributos - ICMS/ST (ADRC-ST, MVA superior)",
           procesor: "Recupera valores de ICMS/ST pagos a mais devido à aplicação de MVA superior à praticada ou erros identificados via ADRC-ST, garantindo o ressarcimento legal e a redução do custo tributário.",
-          age: "TAX020"
+          age: "TAX020",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Recupera%C3%A7%C3%A3o-de-Tributos---ICMS-ST-(ADRC-ST,-MVA-superior).aspx"
         },
 
         {
           name: "Restituição de PIS/COFINS Monofásico",
           procesor: "Analisa e recupera créditos de PIS e COFINS pagos indevidamente na venda de produtos monofásicos (como combustíveis, bebidas e medicamentos), cuja tributação já foi recolhida na indústria, evitando cobrança em duplicidade.",
-          age: "TAX021"
+          age: "TAX021",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Restitui%C3%A7%C3%A3o-de-PIS-COFINS-Monof%C3%A1sico.aspx"
         },
 
         {
           name: "Exclusão do ICMS DIFAL da base de cálculo do PIS e da COFINS",
           procesor: "Apura e recupera valores de PIS e COFINS pagos indevidamente sobre o ICMS-DIFAL, com base no entendimento de que esse valor não integra o faturamento e não deve compor a base das contribuições.",
-          age: "TAX022"
+          age: "TAX022",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Exclus%C3%A3o-do-ICMS-DIFAL-da-base-de-c%C3%A1lculo-do-PIS-e-da-COFINS.aspx"
         },
 
         {
           name: "Imunidade na CPRB/Desoneração da Folha de Pagamento",
           procesor: "Aplica a imunidade da CPRB (Contribuição Previdenciária sobre Receita Bruta) para entidades e atividades amparadas legalmente, garantindo economia com encargos sobre a folha e conformidade com a legislação.",
-          age: "TAX023"
+          age: "TAX023",
+          url: "https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Imunidade-na-CPRB-Desonera%C3%A7%C3%A3o-da-Folha-de-Pagamento.aspx"
         },
 
         {
           name: "Exclusão do Crédito Presumido de ICMS do IRPJ/CSLL - Pacto Federativo",
           procesor: "Reduz a base de cálculo do IRPJ e da CSLL por meio da exclusão de benefícios fiscais de ICMS concedidos pelos estados, conforme o pacto federativo e decisões do STF, gerando economia tributária legal.",
-          age: "TAX024"
+          age: "TAX024",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Exclus%C3%A3o-do-Cr%C3%A9dito-Presumido-de-ICMS-do-IRPJ-CSLL---Pacto-Federativo.aspx"
         },
 
         {
           name: "Lei do Bem - Benefício Fiscal IRPJ CSLL",
           procesor: "Aplica o benefício fiscal da Lei do Bem, que permite deduzir do IRPJ e da CSLL os investimentos em pesquisa, desenvolvimento e inovação, incentivando a inovação tecnológica e gerando economia tributária.",
-          age: "TAX025"
+          age: "TAX025",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Lei-do-Bem---Benef%C3%ADcio-Fiscal-IRPJ-CSLL.aspx"
         },
 
         {
           name: "Recuperação do Crédito de IPI não Recuperável no PIS e COFINS",
           procesor: "Recupera valores de IPI não aproveitados como crédito, permitindo sua compensação no PIS e na COFINS, com base em interpretação legal e jurisprudencial, gerando economia e corrigindo distorções fiscais.",
-          age: "TAX026"
+          age: "TAX026",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Recupera%C3%A7%C3%A3o-do-Cr%C3%A9dito-de-IPI-n%C3%A3o-Recuper%C3%A1vel-no-PIS-e-COFINS.aspx"
         },
 
         {
           name: "Imunidade de PIS COFINS em operações para Zona Franca de Manaus e Áreas de Livre Comércio",
           procesor: "Aplica a imunidade de PIS e COFINS em vendas destinadas à Zona Franca de Manaus e Áreas de Livre Comércio, garantindo isenção legal dos tributos e aumento da competitividade nas operações com esses destinos.",
-          age: "TAX027"
+          age: "TAX027",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Imunidade-de-PIS-COFINS-em-opera%C3%A7%C3%B5es-para-Zona-Franca-de-Manaus-e-%C3%81reas-de-Livre-Com%C3%A9rcio.aspx"
         },
 
         {
           name: "Consultoria e Assessoria no Requerimento de Depreciação Acelerada",
           procesor: "Orienta e executa o processo de requerimento da depreciação acelerada de ativos, permitindo que a empresa antecipe deduções no IRPJ e na CSLL, com base em benefícios legais, reduzindo a carga tributária.",
-          age: "TAX028"
+          age: "TAX028",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Consultoria-e-Assessoria-no-Requerimento-de-Deprecia%C3%A7%C3%A3o-Acelerada.aspx"
         },
 
         
         {
           name: "Exclusão do ICMS ST da base de cálculo de PIS e COFINS",
           procesor: "Aplica a exclusão do ICMS-ST da base de cálculo do PIS e da COFINS, permitindo a recuperação de valores pagos a mais e a redução legal da carga tributária nas operações sujeitas à substituição tributária.",
-          age: "TAX029"
+          age: "TAX029",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20GT/Exclus%C3%A3o-do-ICMS-ST-da-base-de-c%C3%A1lculo-de-PIS-e-COFINS.aspx"
         }
         
       ];
